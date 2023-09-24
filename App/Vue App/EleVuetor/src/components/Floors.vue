@@ -4,6 +4,8 @@
 const props = defineProps({
 numfloors: Number,
 callNewCab: Function,
+    activeCalls: Array,
+arrivedFloors: Array
 });
 </script>
 
@@ -13,7 +15,8 @@ callNewCab: Function,
     <div v-for="floor in props.numfloors" :key="floor" class="floor" >
       <div class="floorLevel">{{ floor }}</div>
         <button class="callBtn" v-on:click="() => callNewCab (floor)"> 
-          <div class="callBtn1" ></div>
+          <div class="callBtn1"   
+          :class="{active: activeCalls[floor-1] && !arrivedFloors[floor-1]}"  ></div>
            </button>
       </div>
   </div>
