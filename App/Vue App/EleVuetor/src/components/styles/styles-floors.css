@@ -1,0 +1,42 @@
+.floors{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    
+
+}
+.floor{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    width: 100%;
+    height: 20%;
+    
+}
+.floorLevel{
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    padding:  0.9rem;
+}
+
+.callBtn{
+    padding: 0.5rem;
+    background-color: white;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    width: 30px;
+    border-radius: 6px;
+    border: solid 1px blue;
+    cursor: pointer;
+    
+}
+.callBtn1{
+height: 10px;
+    border-radius: 30px;
+    background-color: gold;
+    border: solid 1px red;
+}
