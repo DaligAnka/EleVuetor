@@ -10,19 +10,21 @@ const props = defineProps({
   direction: String,
    targetfloor: Number,
   activeCalls: Array,
-  numfloors:Number,
+  numfloors:Number
 });
 
 const isResting = computed(()=> props.activeCalls[props.currentFloor - 1]);
 
 const cabStyle = computed(()=> {
   const floorHeigt = 100;
-  const translateY = (props.currentFloor - 1) * floorHeigt;
-  const cabHeight = 100 / props.numfloors;
+  let translateY = (props.currentFloor - 1) * floorHeigt;
+  let cabHeight = 100 / props.numfloors;
+  const transitionDuration=1;
 
 return{
   transform: `translateY(-${translateY}%)`,
   height: `${cabHeight}%`,
+ transition: `transform ${transitionDuration} linear`
 };
 });
 

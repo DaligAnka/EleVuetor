@@ -1,9 +1,12 @@
 
 <style scoped src="../components/styles/styles-shafts.css" ></style>
-<script setup></script>
+<script setup>
+
+</script>
 
 
 <template>
-  <div class="shaft"></div>
+  <div class="shaft"
+  ></div>
 </template>
 

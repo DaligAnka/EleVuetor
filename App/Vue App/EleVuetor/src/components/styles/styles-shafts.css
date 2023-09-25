@@ -8,6 +8,8 @@ box-sizing: border-box;
   width: 100px;
   height: 100%;
   border-right: 2px solid  rgb(212,175,55);
-  background-color: #dcdcdc;
+  background: radial-gradient(circle at -35.9% 51.2%, rgb(255, 0, 0) 0%, rgb(253, 62, 4) 15.9%, rgb(235, 149, 68) 15.9%, rgb(226, 142, 63) 24.4%, rgb(19, 30, 37) 24.5%, rgb(0, 0, 0) 66%);;
+  /* #dcdcdc */
+  
 }
 

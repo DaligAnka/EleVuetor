@@ -6,6 +6,7 @@ import Cabins from './components/Cabins.vue';
 import Floors from './components/Floors.vue';
 import { ref,reactive, watch, computed,  withModifiers} from 'vue';
 import { Num_Floor, Num_Cabs} from './config';
+import Interaction from './components/Interaction.vue';
 
 
 const ElevuetorState =(index) => {
@@ -52,8 +53,8 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve,ms));
 
  const moveNewCabToTarget = async (newCab) => {
     while (newCab.currentFloor.value !== newCab.targetFloor.value) {
-        newCab.direction.value = newCab.targetFloor.value > newCab.currentFloor.value ? 'Up': 'Down';
-        newCab.currentFloor.value += newCab.direction.value === 'Up' ? 1 : -1;
+        newCab.direction.value = newCab.targetFloor.value > newCab.currentFloor.value ? 'Up:': 'Down:';
+        newCab.currentFloor.value += newCab.direction.value === 'Up:' ? 1 : -1;
         await delay (1000);
     }
 };
@@ -135,6 +136,8 @@ const allActiveCalls = computed(() => {
 </div>
 
 <Floors :numfloors="Num_Floor" :callNewCab="callNewCab" :activeCalls="allActiveCalls" :arrivedFloors="newCabs[0].arrivedFloors"></Floors>
+
+<Interaction></Interaction>
 
 <div class="Cabins-Container">
 <Cabins :numfloors="Num_Floor" v-for="(newCab,index) in newCabs"  :key="index" :currentFloor="newCab.currentFloor.value" :direction="newCab.direction.value"
